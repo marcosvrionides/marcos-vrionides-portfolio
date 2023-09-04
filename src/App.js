@@ -1,7 +1,35 @@
 import './App.css';
+import React, { useState } from 'react';
 import profilePic from './Profile Picture.jpg'
 
 function App() {
+  const [isBouncing1, setIsBouncing1] = useState(false)
+  const [isBouncing2, setIsBouncing2] = useState(false)
+  const [isBouncing3, setIsBouncing3] = useState(false)
+
+  const handleProjectHover = (number) => {
+    switch (number) {
+      case 1:
+        setIsBouncing1(true)
+        setTimeout(() => {
+          setIsBouncing1(false)
+        }, 750)
+        break;
+      case 2:
+        setIsBouncing2(true)
+        setTimeout(() => {
+          setIsBouncing2(false)
+        }, 750)
+        break;
+      case 3:
+        setIsBouncing3(true)
+        setTimeout(() => {
+          setIsBouncing3(false)
+        }, 750)
+        break;
+    }
+  }
+
   return (
     <div className='body'>
       <div className='profile-container'>
@@ -22,13 +50,13 @@ function App() {
           Projects
         </div>
         <div className='projects-cards'>
-          <div className='project'>
+          <div className={isBouncing1 ? 'bounce' : 'project'} onMouseEnter={() => handleProjectHover(1)}>
             <div className='project-title'>My Lists</div>
           </div>
-          <div className='project'>
+          <div className={isBouncing2 ? 'bounce' : 'project'} onMouseEnter={() => handleProjectHover(2)}>
             <div className='project-title'>StudentsThoughts.com</div>
           </div>
-          <div className='project'>
+          <div className={isBouncing3 ? 'bounce' : 'project'} onMouseEnter={() => handleProjectHover(3)}>
             <div className='project-title'>Connect</div>
           </div>
         </div>
