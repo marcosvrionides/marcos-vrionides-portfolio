@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
 import profilePic from './Profile Picture.jpg'
+import { IoMdOpen } from 'react-icons/io'
 
 function App() {
   const [isBouncing1, setIsBouncing1] = useState(false)
@@ -11,21 +12,26 @@ function App() {
     switch (number) {
       case 1:
         setIsBouncing1(true)
-        setTimeout(() => {
-          setIsBouncing1(false)
-        }, 750)
         break;
       case 2:
         setIsBouncing2(true)
-        setTimeout(() => {
-          setIsBouncing2(false)
-        }, 750)
         break;
       case 3:
         setIsBouncing3(true)
-        setTimeout(() => {
-          setIsBouncing3(false)
-        }, 750)
+        break;
+    }
+  }
+
+  const handleMouseLeave = (number) => {
+    switch (number) {
+      case 1:
+        setIsBouncing1(false)
+        break;
+      case 2:
+        setIsBouncing2(false)
+        break;
+      case 3:
+        setIsBouncing3(false)
         break;
     }
   }
@@ -34,7 +40,7 @@ function App() {
     <div className='body'>
       <div className='profile-container'>
         <img className='profile-picture' src={profilePic} alt="marcos's profile" />
-        <div className='profile-div'>
+        <div className='profile-text'>
           <div className='name'>Marcos Vrionides</div>
           <div className='occupation'>Software Developer</div>
         </div>
@@ -50,17 +56,46 @@ function App() {
           Projects
         </div>
         <div className='projects-cards'>
-          <div className={isBouncing1 ? 'bounce' : 'project'} onMouseEnter={() => handleProjectHover(1)}>
+          <div className={isBouncing1 ? 'bounce' : 'project'} onMouseEnter={() => handleProjectHover(1)} onMouseLeave={() => handleMouseLeave(1)}>
             <div className='project-title'>My Lists</div>
+            <span className='project-description'>
+              List creation application created using Java and Android Studio. Users can create lists in which they can add or check off items and view their completed items.
+            </span>
+            <a className='goToProjectButton' href='https://play.google.com/store/apps/details?id=com.marcosvrionides.todolistapp&pcampaignid=web_share' target='_blank'>
+              <span className='goToProjectButtonIcon'>
+                <IoMdOpen />
+              </span>
+            </a>
           </div>
-          <div className={isBouncing2 ? 'bounce' : 'project'} onMouseEnter={() => handleProjectHover(2)}>
-            <div className='project-title'>StudentsThoughts.com</div>
+          <div className={isBouncing2 ? 'bounce' : 'project'} onMouseEnter={() => handleProjectHover(2)} onMouseLeave={() => handleMouseLeave(2)}>
+            <div className='project-title'>Students Thoughts</div>
+            <span className='project-description'>
+              Full stack social media website created using React.js, Express.js, Firebase and Google Cloud Platform. Users on the website can share and interact with
+              other user's posts, browse communities, send direct messages as well as group messages and edit their public profile or view other user's profiles.
+            </span>
+            <a className='goToProjectButton' href='http://www.studentsthoughts.com/' target='_blank'>
+              <span className='goToProjectButtonIcon'>
+                <IoMdOpen />
+              </span></a>
           </div>
-          <div className={isBouncing3 ? 'bounce' : 'project'} onMouseEnter={() => handleProjectHover(3)}>
+          <div className={isBouncing3 ? 'bounce' : 'project'} onMouseEnter={() => handleProjectHover(3)} onMouseLeave={() => handleMouseLeave(3)}>
             <div className='project-title'>Connect</div>
+            <span className='project-description'>
+              Social media application created using React Native and Firebase. Users can share posts (text, image, video) and interact with other user's posts
+              by liking and commenting. Additionaly, users can send direct messages to other users. Lastly, every user has a profile page which they can edit and
+              other users can view.
+            </span>
+            <a className='goToProjectButton' href='https://play.google.com/store/apps/details?id=com.studentsthoughtsapp&pcampaignid=web_share' target='_blank'>
+              <span className='goToProjectButtonIcon'>
+                <IoMdOpen />
+              </span>
+            </a>
           </div>
         </div>
       </div>
+      {/* <div className='education-container'>
+        <div className='education-title'>Education</div>
+      </div> */}
     </div>
   );
 }

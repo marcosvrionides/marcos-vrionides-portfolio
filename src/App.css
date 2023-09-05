@@ -2,13 +2,9 @@
   background-color: white;
   padding: 1em;
   font-family: 'Times New Roman', Times, serif;
-}
-
-.profile-picture {
-  width: 128px;
-  height: 128px;
-  border: 3px solid black;
-  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
 }
 
 .profile-container {
@@ -16,6 +12,21 @@
   flex-direction: row;
   align-items: center;
   gap: 1em;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    justify-content: center;
+  }
+}
+
+.profile-picture {
+  width: 5em;
+  height: 5em;
+  border: 3px solid black;
+  border-radius: 50%;
 }
 
 .profile-text {
@@ -41,15 +52,32 @@
   padding: 1em;
   display: flex;
   align-items: center;
+  margin-left: 50%;
+  transform: translate(-50%);
+  margin-block: 10%;
+}
 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+@media (max-width: 768px) {
+  .introduction-container {
+    max-width: 90%;
+    height: auto;
+    position: unset;
+    transform: unset;
+    margin-left: 50%;
+    transform: translate(-50%);
+    margin-block: 30%;
+  }
 }
 
 .emoji {
   font-size: 6em;
+}
+
+@media (max-width: 768px) {
+  .emoji {
+    position: absolute;
+    visibility: hidden;
+  }
 }
 
 .intro {
@@ -62,31 +90,53 @@
 }
 
 .projects-container {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 105%);
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    margin-left: unset;
+    transform: unset;
+    width: auto;
+  }
 }
 
 .projects-title {
   font-size: 3em;
   text-align: center;
   margin-bottom: 1em;
-  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .projects-title {
+    margin-bottom: 0;
+  }
 }
 
 .projects-cards {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 2em;
+  padding-inline: 1em;
+}
+
+@media (max-width: 768px) {
+  .projects-cards {
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+  }
 }
 
 .projects-cards>* {
   width: 30em;
   height: 30em;
+  max-width: 100%;
 }
 
 .projects-cards> :first-child {
-  background-color: #0261D4;
+  background-color: #3a91fc;
 }
 
 .projects-cards> :nth-child(2) {
@@ -97,32 +147,61 @@
   background-color: #D47602;
 }
 
-
-
 .project-title {
   font-size: 2.5em;
   text-align: center;
   padding: 0.25em;
 }
 
+.project-description {
+  font-size: 1.25em;
+}
+
+.project {
+  padding: 1em;
+  scale: 1;
+  transition: all 0.5s;
+}
+
 .bounce {
-  animation: bounce 0.75s ease;
-  animation-fill-mode: both;
+  padding: 1em;
+  scale: 1.25;
+  z-index: 1;
+  transition: all 0.5s;
 }
 
-@keyframes bounce {
-
-  0%,
-  100% {
-    transform: scale(1)
-  }
-
-  50% {
-    transform: scale(1.2);
-  }
-
-  80% {
-    transform: scale(0.95);
-  }
+.goToProjectButton {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  height: 5em;
+  width: 5em;
+  background-color: white;
+  border: 0;
+  border-radius: 50%;
+  transition: all 0.75s;
+  text-align: center;
 }
 
+.goToProjectButton:hover {
+  scale: 1.2;
+  transition: all 0.75s;
+}
+
+.goToProjectButtonIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 2em;
+}
+
+.education-container {
+  background-color: greenyellow;
+}
+
+.education-title {
+  font-size: 3em;
+  text-align: center;
+}
