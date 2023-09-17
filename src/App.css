@@ -1,10 +1,18 @@
 .body {
-  background-color: white;
+  background-image: url('./background\ picture.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
   padding: 1em;
   font-family: 'Times New Roman', Times, serif;
   display: flex;
   flex-direction: column;
   gap: 5em;
+}
+
+@media (max-width: 768px) {
+  .body {
+    background-size: auto 15%;
+  }
 }
 
 .profile-container {
@@ -54,7 +62,7 @@
   align-items: center;
   margin-left: 50%;
   transform: translate(-50%);
-  margin-block: 10%;
+  margin-top: 10%;
 }
 
 @media (max-width: 768px) {
@@ -65,7 +73,7 @@
     transform: unset;
     margin-left: 50%;
     transform: translate(-50%);
-    margin-block: 30%;
+    margin-top: 30%;
   }
 }
 
@@ -87,6 +95,99 @@
 .highlight {
   font-size: 1.25em;
   color: #D47602;
+}
+
+.contact-container {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+.contact-button {
+  background-color: #333;
+  /* Background color */
+  color: #fff;
+  /* Text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #555;
+  /* Hover background color */
+}
+
+.contact-button svg {
+  margin-right: 8px;
+  font-size: 20px;
+  fill: #fff;
+  /* Icon color */
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.cv-container {
+  background-color: rgba(226, 226, 226, 0.5);
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  animation: cv-fade-in 0.5s;
+}
+
+@keyframes cv-fade-in {
+  0% {
+    background-color: rgba(226, 226, 226, 0);
+  }
+
+  100% {
+    background-color: rgba(226, 226, 226, 0.5);
+  }
+}
+
+.CV {
+  position: fixed;
+  height: 95vh;
+  z-index: 1;
+  border: 3px solid black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+  .CV {
+    height: auto;
+    width: 95vw;
+  }
+}
+
+.close-cv-button {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  z-index: 1;
+  height: 3em;
+  width: 3em;
+  background-color: rgba(0, 0, 0, 0.253);
+  border: 0;
+  border-radius: 50%;
+  font-size: 1.5em;
+}
+
+.close-cv-button:hover {
+  background-color: rgba(37, 37, 37, 0.253);
 }
 
 .projects-container {
@@ -165,9 +266,15 @@
 
 .bounce {
   padding: 1em;
-  scale: 1.25;
+  scale: 1.1;
   z-index: 1;
   transition: all 0.5s;
+}
+
+@media (max-width: 768px) {
+  .bounce {
+    scale: 1
+  }
 }
 
 .goToProjectButton {
@@ -188,6 +295,12 @@
   transition: all 0.75s;
 }
 
+@media (max-width: 768px) {
+  .goToProjectButton:hover {
+    scale: 1
+  }
+}
+
 .goToProjectButtonIcon {
   display: flex;
   justify-content: center;
@@ -198,10 +311,94 @@
 }
 
 .education-container {
-  background-color: greenyellow;
+  background-color: gainsboro;
+  padding: 1em;
 }
 
 .education-title {
   font-size: 3em;
   text-align: center;
+}
+
+.education-items-container {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 768px) {
+  .education-items-container {
+    flex-direction: column;
+  }
+}
+
+.education-item {
+  margin-bottom: 1em;
+  background-color: rgb(200, 200, 200);
+  padding: 1em;
+  padding-right: 5em;
+  border-radius: 2em;
+  width: 40vw;
+}
+
+@media (max-width: 768px) {
+  .education-item {
+    width: auto;
+  }
+}
+
+.education-year {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.education-degree {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.education-institution {
+  font-size: 1.25em;
+}
+
+.education-subjects {
+  font-size: 1.15em;
+  padding-left: 0.5em;
+}
+
+.navigator-container {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0.5em;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navigator-container a {
+  color: black;
+  font-size: 2em;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+
+.navigator-container a:hover {
+  font-size: 2.1em;
+  color: rgb(146, 1, 1);
+  transition: all 0.5s;
+}
+
+@media (max-width: 768px) {
+  .navigator-container {
+    visibility: hidden;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }

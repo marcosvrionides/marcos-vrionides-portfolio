@@ -1,9 +1,17 @@
 import './App.css';
-import React, { useState } from 'react';
-import profilePic from './Profile Picture.jpg'
-import { IoMdOpen } from 'react-icons/io'
+import React, { useState, useEffect } from 'react';
+import profilePic from './Profile Picture.jpg';
+import { IoMdOpen } from 'react-icons/io';
+import { FaLinkedin } from 'react-icons/fa';
+import { FaFilePdf, FaGithub } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
+import CV from './CV.jpg'
 
 function App() {
+  useEffect(() => {
+    document.title = 'Marcos'
+  }, [])
+
   const [isBouncing1, setIsBouncing1] = useState(false)
   const [isBouncing2, setIsBouncing2] = useState(false)
   const [isBouncing3, setIsBouncing3] = useState(false)
@@ -36,9 +44,16 @@ function App() {
     }
   }
 
+  const [showCV, setShowCV] = useState(false)
+
   return (
     <div className='body'>
-      <div className='profile-container'>
+      <div className='navigator-container'>
+        <a href='#profile'>Profile</a>
+        <a href='#projects'>Projects</a>
+        <a href='#education'>Education</a>
+      </div>
+      <div className='profile-container' id='profile'>
         <img className='profile-picture' src={profilePic} alt="marcos's profile" />
         <div className='profile-text'>
           <div className='name'>Marcos Vrionides</div>
@@ -51,7 +66,27 @@ function App() {
           <span className='highlight'>Hey,</span> I’m Marcos a  junior software developer with a passion for building innovative projects and an eagerness to learn and contribute my skills and knowledge to a dynamic team.
         </div>
       </div>
-      <div className='projects-container'>
+      <div className="contact-container">
+        <a href="https://www.linkedin.com/in/marcos-vrionides/" target='_blank' className="contact-button">
+          <FaLinkedin /> LinkedIn
+        </a>
+        <a href="https://github.com/marcosvrionides" target='_blank' className="contact-button">
+          <FaGithub /> GitHub
+        </a>
+        <a href={'mailto:vrionides2000@gmail.com'} className="contact-button">
+          <MdEmail /> Email
+        </a>
+        <button className="contact-button" onClick={() => setShowCV(true)}>
+          <FaFilePdf /> CV
+        </button>
+        {showCV &&
+          <div className={'cv-container'}>
+            <img className='CV' src={CV} />
+            <button className='close-cv-button' onClick={() => setShowCV(false)}>X</button>
+          </div>
+        }
+      </div>
+      <div className='projects-container' id='projects'>
         <div className='projects-title'>
           Projects
         </div>
@@ -93,9 +128,27 @@ function App() {
           </div>
         </div>
       </div>
-      {/* <div className='education-container'>
+      <div className='education-container' id='education'>
         <div className='education-title'>Education</div>
-      </div> */}
+        <div className='education-items-container'>
+          <div className='education-item'>
+            <p className='education-year'>2020 - 2023</p>
+            <p className='education-degree'>BSc Computer Science</p>
+            <p className='education-institution'>Loughborough University</p>
+          </div>
+          <div className='education-item'>
+            <p className='education-year'>2012 - 2019</p>
+            <p className='education-degree'>A-Levels</p>
+            <p className='education-institution'>Xenion Education</p>
+            <div className='education-subjects'>
+              <p>Physics (A)</p>
+              <p>Mathematics (B)</p>
+              <p>Computer Science (B)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 }
