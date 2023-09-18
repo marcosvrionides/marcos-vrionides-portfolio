@@ -1,0 +1,36 @@
+.profile-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .profile-picture {
+    width: 5em;
+    height: 5em;
+    border: 3px solid black;
+    border-radius: 50%;
+  }
+  
+  .profile-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .name {
+    font-size: 2em;
+  }
+  
+  .occupation {
+    font-size: 1.5em;
+    color: #737373;
+  }
+  
+  @media (max-width: 768px) {
+    .profile-container {
+      justify-content: center;
+    }
+  }

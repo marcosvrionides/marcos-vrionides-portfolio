@@ -1,0 +1,55 @@
+.education-container {
+    background-color: gainsboro;
+    padding: 1em;
+}
+
+.education-title {
+    font-size: 3em;
+    text-align: center;
+}
+
+.education-items-container {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.education-item {
+    margin-bottom: 1em;
+    background-color: rgb(200, 200, 200);
+    padding: 1em;
+    padding-right: 5em;
+    border-radius: 2em;
+    width: 40vw;
+}
+
+.education-year {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.education-degree {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.education-institution {
+    font-size: 1.25em;
+}
+
+.education-subjects {
+    font-size: 1.15em;
+    padding-left: 0.5em;
+}
+
+@media (max-width: 768px) {
+    .education-items-container {
+        flex-direction: column;
+    }
+
+    .education-item {
+        width: auto;
+    }
+}

@@ -1,0 +1,94 @@
+.contact-container {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+.contact-button {
+    background-color: #333;
+    /* Background color */
+    color: #fff;
+    /* Text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #555;
+    /* Hover background color */
+}
+
+.contact-button svg {
+    margin-right: 8px;
+    font-size: 20px;
+    fill: #fff;
+    /* Icon color */
+}
+
+.cv-container {
+    background-color: rgba(226, 226, 226, 0.5);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    animation: cv-fade-in 0.5s;
+}
+
+.CV {
+    position: fixed;
+    height: 95vh;
+    z-index: 1;
+    border: 3px solid black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close-cv-button {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    z-index: 1;
+    height: 3em;
+    width: 3em;
+    background-color: rgba(0, 0, 0, 0.253);
+    border: 0;
+    border-radius: 50%;
+    font-size: 1.5em;
+}
+
+.close-cv-button:hover {
+    background-color: rgba(37, 37, 37, 0.253);
+}
+
+.projects-container {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .CV {
+        height: auto;
+        width: 95vw;
+    }
+}
+
+@keyframes cv-fade-in {
+    0% {
+        background-color: rgba(226, 226, 226, 0);
+    }
+
+    100% {
+        background-color: rgba(226, 226, 226, 0.5);
+    }
+}

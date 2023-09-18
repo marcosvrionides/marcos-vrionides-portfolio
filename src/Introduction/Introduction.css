@@ -1,0 +1,42 @@
+.introduction-container {
+    background-color: #E1E1E1;
+    height: 10em;
+    width: 35em;
+    border-radius: 1em;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    margin-left: 50%;
+    transform: translate(-50%);
+    margin-top: 10%;
+}
+
+.emoji {
+    font-size: 6em;
+}
+
+.intro {
+    font-size: 1.75em;
+}
+
+.highlight {
+    font-size: 1.25em;
+    color: #D47602;
+}
+
+@media (max-width: 768px) {
+    .introduction-container {
+        max-width: 90%;
+        height: auto;
+        position: unset;
+        transform: unset;
+        margin-left: 50%;
+        transform: translate(-50%);
+        margin-top: 30%;
+    }
+
+    .emoji {
+        position: absolute;
+        visibility: hidden;
+    }
+}
