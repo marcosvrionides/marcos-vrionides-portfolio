@@ -1,20 +1,20 @@
 .body {
-  background-image: url('./background\ picture.png');
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  padding: 1em;
-  font-family: 'Times New Roman', Times, serif;
-  display: flex;
-  flex-direction: column;
-  gap: 5em;
+	background-image: url("./background\ picture.png");
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	font-family: "Times New Roman", Times, serif;
+	display: flex;
+	flex-direction: column;
+	gap: 5em;
+	overflow-x: hidden;
 }
 
 @media (max-width: 768px) {
-  .body {
-    background-size: auto 15%;
-  }
+	.body {
+		background-size: auto 15%;
+	}
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }

@@ -1,42 +1,41 @@
 .introduction-container {
-    background-color: #E1E1E1;
-    height: 10em;
-    width: 35em;
-    border-radius: 1em;
-    padding: 1em;
-    display: flex;
-    align-items: center;
-    margin-left: 50%;
-    transform: translate(-50%);
-    margin-top: 10%;
+	background-color: #e1e1e1;
+	height: 10em;
+	width: 35em;
+	border-radius: 1em;
+	padding: 1em;
+	display: flex;
+	align-items: center;
+	margin-left: 50%;
+	transform: translate(-50%);
+	margin-top: 10%;
 }
 
 .emoji {
-    font-size: 6em;
+	font-size: 6em;
 }
 
 .intro {
-    font-size: 1.75em;
+	font-size: 1.75em;
 }
 
 .highlight {
-    font-size: 1.25em;
-    color: #D47602;
+	font-size: 1.25em;
+	color: #d47602;
 }
 
 @media (max-width: 768px) {
-    .introduction-container {
-        max-width: 90%;
-        height: auto;
-        position: unset;
-        transform: unset;
-        margin-left: 50%;
-        transform: translate(-50%);
-        margin-top: 30%;
-    }
+	.introduction-container {
+		width: unset;
+		transform: unset;
+		margin-left: unset;
+		height: auto;
+		margin-top: unset;
+		margin-inline: 1em;
+	}
 
-    .emoji {
-        position: absolute;
-        visibility: hidden;
-    }
+	.emoji {
+		position: absolute;
+		visibility: hidden;
+	}
 }
