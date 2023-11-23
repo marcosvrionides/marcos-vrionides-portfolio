@@ -1,3 +1,10 @@
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+}
+
 .profile-container {
 	display: flex;
 	flex-direction: row;
@@ -29,9 +36,37 @@
 	color: #737373;
 }
 
+.links {
+	margin: 1em;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 1em;
+	align-items: center;
+}
+
+.links a {
+	font-size: 2em;
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.links a:hover {
+	color: brown;
+}
+
 @media (max-width: 768px) {
+	.container {
+		display: unset;
+		flex-direction: unset;
+		justify-content: unset;
+	}
 	.profile-container {
 		justify-content: center;
 		flex-direction: column;
+	}
+	.links {
+		visibility: hidden;
 	}
 }

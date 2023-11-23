@@ -1,14 +1,13 @@
 .body {
 	background-image: url("./background\ picture.png");
 	background-repeat: no-repeat;
-	background-size: 100% auto;
+	background-size: 100% 40%;
 	font-family: "Times New Roman", Times, serif;
 	display: flex;
 	flex-direction: column;
 	gap: 5em;
 	overflow-x: hidden;
 }
-
 @media (max-width: 768px) {
 	.body {
 		background-size: auto 15%;

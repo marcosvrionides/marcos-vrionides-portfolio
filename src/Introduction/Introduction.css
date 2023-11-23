@@ -8,7 +8,8 @@
 	align-items: center;
 	margin-left: 50%;
 	transform: translate(-50%);
-	margin-top: 10%;
+	margin-top: 5%;
+	border: 2px solid rgb(253, 250, 233);
 }
 
 .emoji {
@@ -30,8 +31,8 @@
 		transform: unset;
 		margin-left: unset;
 		height: auto;
-		margin-top: unset;
 		margin-inline: 1em;
+		margin-top: unset;
 	}
 
 	.emoji {

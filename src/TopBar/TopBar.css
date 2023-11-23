@@ -1,0 +1,39 @@
+.container-visible {
+	height: 120px;
+	width: 100%;
+	position: fixed;
+	transition: all 0.25s;
+	z-index: 2;
+}
+
+.container-hidden {
+	visibility: hidden;
+	height: 0px;
+	width: 100%;
+	position: fixed;
+	transition: all 0.25s;
+}
+
+.background {
+	background-color: rgba(233, 241, 253, 0.8);
+	border-bottom: 2px solid rgba(253, 250, 233, 0.8);
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	backdrop-filter: blur(4px);
+}
+
+.items {
+	position: absolute;
+	z-index: 2;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+}
+
+@media (max-width: 768px) {
+	.container-visible {
+		visibility: hidden;
+	}
+}
