@@ -1,4 +1,4 @@
-.education-container {
+.history-container {
 	padding: 2em;
 	background-image: url("../background\ picture\ -\ bottom.png");
 	background-repeat: no-repeat;
@@ -7,73 +7,59 @@
 	padding-bottom: 15%;
 }
 
-.education-title {
+.history-title {
 	font-size: 3em;
 	font-weight: bold;
 	text-align: center;
 	padding-bottom: 1em;
 }
 
-.education-items-container {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+.history-items-container {
 	padding: 1em;
 	align-items: center;
 	gap: 5%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 25em);
+	justify-content: center;
 }
 
-.education-item {
+.history-item {
 	background-color: rgb(233, 241, 253);
 	border-radius: 1em;
 	width: 20vw;
 	padding: 1em;
 	border: 2px solid rgb(253, 250, 233);
+	justify-self: center;
 }
 
-.education-year {
+.history-year {
 	font-size: 1.5em;
 	font-weight: bold;
 	color: #007bff;
 }
 
-.education-degree {
+.history-degree {
 	font-size: 1.5em;
 	font-weight: bold;
 }
 
-.education-institution {
+.history-institution {
 	font-size: 1.25em;
 }
 
-.education-subjects {
+.history-subjects {
 	font-size: 1.15em;
 	padding-left: 0.5em;
 }
 
-.arrow {
-	width: 0;
-	height: 0;
-	border-top: 20px solid transparent;
-	border-bottom: 20px solid transparent;
-	border-left: 30px solid black;
-	border-right: 0px;
-}
-
-@media (max-width: 768px) {
-	.education-items-container {
+@media (max-width: 1000px) {
+	.history-items-container {
+		display: flex;
 		flex-direction: column;
 		gap: 1em;
 	}
 
-	.education-item {
+	.history-item {
 		width: 100%;
-	}
-
-	.arrow {
-		border-top: 30px solid black;
-		border-left: 20px solid transparent;
-		border-right: 20px solid transparent;
-		border-bottom: 0px;
 	}
 }

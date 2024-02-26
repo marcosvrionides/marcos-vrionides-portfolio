@@ -4,7 +4,7 @@ import Profile from "./Profile/Profile";
 import Introduction from "./Introduction/Introduction";
 import Links from "./Links/Links";
 import Projects from "./Projects/Projects";
-import Education from "./Education/Education";
+import History from "./History/History";
 import TopBar from "./TopBar/TopBar";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
 			<Introduction />
 			<Links />
 			<Projects />
-			<Education />
+			<History />
 		</div>
 	);
 }
