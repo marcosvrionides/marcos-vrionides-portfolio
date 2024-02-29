@@ -61,12 +61,13 @@
 		display: unset;
 		flex-direction: unset;
 		justify-content: unset;
+		margin-top: 1em;
 	}
 	.profile-container {
 		justify-content: center;
 		flex-direction: column;
 	}
 	.links {
-		visibility: hidden;
+		display: none;
 	}
 }

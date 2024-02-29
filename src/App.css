@@ -11,6 +11,7 @@
 @media (max-width: 768px) {
 	.body {
 		background-size: auto 15%;
+		gap: 3em;
 	}
 }
 
