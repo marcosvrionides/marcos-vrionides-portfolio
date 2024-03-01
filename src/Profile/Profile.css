@@ -1,3 +1,5 @@
+@import url("../colours.css");
+
 .container {
 	display: flex;
 	flex-direction: row;
@@ -17,7 +19,7 @@
 .profile-picture {
 	width: 5em;
 	height: 5em;
-	border: 3px solid black;
+	border: 3px solid var(--text);
 	border-radius: 50%;
 }
 
@@ -29,11 +31,18 @@
 
 .name {
 	font-size: 2em;
+	color: var(--text);
+	background-color: var(--text-secondary);
+	border-radius: 1em;
+	padding: 0.25em;
 }
 
 .occupation {
 	font-size: 1.5em;
-	color: #737373;
+	color: var(--text-secondary);
+	background-color: var(--text);
+	border-radius: 1em;
+	padding: 0.25em;
 }
 
 .links {
@@ -43,11 +52,14 @@
 	justify-content: center;
 	gap: 1em;
 	align-items: center;
+	background-color: var(--text-secondary);
+	border-radius: 2em;
+	padding: 1em;
 }
 
 .links a {
 	font-size: 2em;
-	color: black;
+	color: var(--text);
 	text-decoration: none;
 	font-weight: bold;
 }

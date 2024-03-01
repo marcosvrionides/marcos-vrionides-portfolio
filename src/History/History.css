@@ -1,3 +1,5 @@
+@import url(../colours.css);
+
 .history-container {
 	padding: 2em;
 	background-image: url("../background\ picture\ -\ bottom.png");
@@ -12,6 +14,7 @@
 	font-weight: bold;
 	text-align: center;
 	padding-bottom: 1em;
+	color: var(--text);
 }
 
 .history-items-container {
@@ -24,11 +27,11 @@
 }
 
 .history-item {
-	background-color: rgb(233, 241, 253);
+	background-color: var(--colour2);
 	border-radius: 1em;
 	width: 20vw;
 	padding: 1em;
-	border: 2px solid rgb(253, 250, 233);
+	border: 2px solid var(--colour1);
 	justify-self: center;
 }
 
@@ -41,15 +44,18 @@
 .history-degree {
 	font-size: 1.5em;
 	font-weight: bold;
+	color: var(--text-secondary);
 }
 
 .history-institution {
 	font-size: 1.25em;
+	color: var(--text-secondary);
 }
 
 .history-subjects {
 	font-size: 1.15em;
 	padding-left: 0.5em;
+	color: var(--text-secondary);
 }
 
 @media (max-width: 1000px) {

@@ -1,3 +1,5 @@
+@import url("../colours.css");
+
 .container-visible {
 	height: 120px;
 	width: 100%;
@@ -15,8 +17,8 @@
 }
 
 .background {
-	background-color: rgba(233, 241, 253, 0.8);
-	border-bottom: 2px solid rgba(253, 250, 233, 0.8);
+	background-color: var(--colour28);
+	border-bottom: 2px solid var(--colour18);
 	height: 100%;
 	width: 100%;
 	position: absolute;

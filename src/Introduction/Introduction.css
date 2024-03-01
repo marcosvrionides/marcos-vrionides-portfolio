@@ -1,3 +1,5 @@
+@import "../colours.css";
+
 .introduction-container {
 	background-color: #e1e1e1;
 	height: 10em;
@@ -9,7 +11,7 @@
 	margin-left: 50%;
 	transform: translate(-50%);
 	margin-top: 5%;
-	border: 2px solid rgb(253, 250, 233);
+	border: 2px solid var(--colour1);
 }
 
 .wave {
@@ -19,6 +21,7 @@
 
 .intro {
 	font-size: 1.75em;
+	color: var(--text);
 }
 
 .highlight {

@@ -1,3 +1,5 @@
+@import url("../colours.css");
+
 .projects-container {
 	display: flex;
 	flex-direction: column;
@@ -10,6 +12,7 @@
 	font-weight: bold;
 	text-align: center;
 	margin-bottom: 1em;
+	color: var(--text);
 }
 
 .projects-cards {
@@ -25,7 +28,7 @@
 	min-height: 30em;
 	max-width: 100%;
 	border-radius: 1em;
-	background-color: rgb(253, 250, 233);
+	background-color: var(--colour1);
 }
 
 .project-title {
@@ -33,11 +36,13 @@
 	text-align: center;
 	padding-bottom: 0.25em;
 	overflow: hidden;
+	color: var(--text);
 }
 
 .project-description {
 	font-size: 1.25em;
 	line-height: 1.25em;
+	color: var(--text);
 }
 
 .project {
@@ -83,12 +88,12 @@
 }
 
 .tech-stack-container span {
-	background-color: rgb(233, 241, 253);
+	background-color: var(--colour2);
 	margin-inline-end: 0.25em;
 	margin-block: 0.25em;
 	padding: 0.5em;
 	border-radius: 1em;
-	color: black;
+	color: var(--text-secondary);
 	font-size: 1em;
 	display: inline-block;
 }
