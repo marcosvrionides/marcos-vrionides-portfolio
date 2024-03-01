@@ -15,7 +15,9 @@ import MyListsNew from "./Sreenshots/MyLists_new.jpg";
 
 import StudentsThoughtsFeed from "./Sreenshots/StudentsThoughts_feed.png";
 
-import PortfolioHome from "./Sreenshots/Portfolio_home.png";
+import PortfolioHome from "./Sreenshots/Portfolio_home.jpeg";
+
+import DespotisHome from "./Sreenshots/Despoti_home.png";
 
 const Projects = () => {
 	const [isBouncing1, setIsBouncing1] = useState(false);
@@ -23,6 +25,7 @@ const Projects = () => {
 	const [isBouncing3, setIsBouncing3] = useState(false);
 	const [isBouncing4, setIsBouncing4] = useState(false);
 	const [isBouncing5, setIsBouncing5] = useState(false);
+	const [isBouncing6, setIsBouncing6] = useState(false);
 
 	const handleProjectHover = (number) => {
 		switch (number) {
@@ -40,6 +43,9 @@ const Projects = () => {
 				break;
 			case 5:
 				setIsBouncing5(true);
+				break;
+			case 6:
+				setIsBouncing6(true);
 				break;
 		}
 	};
@@ -61,13 +67,44 @@ const Projects = () => {
 			case 5:
 				setIsBouncing5(false);
 				break;
+			case 6:
+				setIsBouncing6(false);
+				break;
 		}
 	};
 
 	return (
 		<div className="projects-container" id="projects">
-			<div className="projects-title">Projects</div>
+			<div className="projects-title">My Projects</div>
 			<div className="projects-cards">
+				<div
+					className={isBouncing6 ? "bounce" : "project"}
+					onMouseEnter={() => handleProjectHover(6)}
+					onMouseLeave={() => handleMouseLeave(6)}
+				>
+					<div className="project-title">Stefanos Despoti</div>
+					<div className="project-screenshots-landscape">
+						<img src={DespotisHome} />
+					</div>
+					<span className="project-description">
+						A responisve personal website for a musician to use as a
+						business tool.
+					</span>
+					<div className="tech-stack-container">
+						<span>React Native</span>
+						<span>Firebase Hosting</span>
+						<span>Git / Github</span>
+					</div>
+					<a
+						className="goToProjectButton"
+						href="https://despotis-ca7ff.web.app/"
+						target="_blank"
+					>
+						<span className="goToProjectButtonIcon">
+							<IoMdOpen />
+						</span>
+					</a>
+				</div>
 				<div
 					className={isBouncing5 ? "bounce" : "project"}
 					onMouseEnter={() => handleProjectHover(5)}
