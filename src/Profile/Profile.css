@@ -46,6 +46,7 @@
 }
 
 .links {
+	position: relative;
 	margin: 1em;
 	display: flex;
 	flex-direction: row;
@@ -66,7 +67,25 @@
 }
 
 .links a:hover {
-	color: brown;
+	color: var(--text-secondary);
+}
+
+.scrollWatcher {
+	height: 10px;
+	width: 90%;
+	position: absolute;
+	bottom: 10%;
+	transform-origin: left;
+	background-color: var(--text);
+	scale: 0.225 1;
+	animation: scrollWatcher linear;
+	animation-timeline: scroll();
+}
+
+@keyframes scrollWatcher {
+	to {
+		scale: 1 1;
+	}
 }
 
 @media (max-width: 768px) {

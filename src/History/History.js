@@ -26,7 +26,7 @@ const History = () => {
 				<div className="history-item">
 					<p className="history-year">2019</p>
 					<p className="history-degree">A-Levels</p>
-					<p className="history-institution">Xenion history</p>
+					<p className="history-institution">Xenion Education</p>
 					<div className="history-subjects">
 						<p>Physics (A)</p>
 						<p>Mathematics (B)</p>
