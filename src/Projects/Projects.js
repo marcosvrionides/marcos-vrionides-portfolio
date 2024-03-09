@@ -15,7 +15,7 @@ import MyListsNew from "./Sreenshots/MyLists_new.jpg";
 
 import StudentsThoughtsFeed from "./Sreenshots/StudentsThoughts_feed.png";
 
-import PortfolioHome from "./Sreenshots/Portfolio_home.jpeg";
+import PortfolioHome from "./Sreenshots/Portfolio_home.jpg";
 
 import DespotisHome from "./Sreenshots/Despoti_home.png";
 

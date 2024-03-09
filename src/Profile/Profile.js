@@ -20,7 +20,6 @@ const Profile = () => {
 				<a href="#">Home</a>
 				<a href="#projects">Projects</a>
 				<a href="#history">Timeline</a>
-				<div className="scrollWatcher" />
 			</div>
 		</div>
 	);
