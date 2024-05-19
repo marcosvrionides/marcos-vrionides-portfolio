@@ -7,6 +7,11 @@ const History = () => {
 			<div className="history-title">My Timeline</div>
 			<div className="history-items-container">
 				<div className="history-item">
+					<p className="history-year">April 2024 - Present</p>
+					<p className="history-degree">Pega Developer</p>
+					<p className="history-institution">NHS Resolution</p>
+				</div>
+				<div className="history-item">
 					<p className="history-year">2023 - 2024</p>
 					<p className="history-degree">Software Developer</p>
 					<p className="history-institution">Freelance</p>
