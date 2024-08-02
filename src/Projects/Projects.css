@@ -1,10 +1,11 @@
 @import url("../colours.css");
 
 .projects-container {
-	display: flex;
-	flex-direction: column;
-	padding-block-end: 5em;
-	padding-top: 7%;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position-y: bottom;
+	padding-bottom: 2%;
+	background-image: url("../background\ picture\ -\ bottom.png");
 }
 
 .projects-title {

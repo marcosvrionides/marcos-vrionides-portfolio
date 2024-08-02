@@ -6,6 +6,7 @@ import Links from "./Links/Links";
 import Projects from "./Projects/Projects";
 import History from "./History/History";
 import TopBar from "./TopBar/TopBar";
+import Certifications from "./Certifications/Certifications";
 import { initializeApp } from "firebase/app";
 import { getAnalytics, logEvent } from "firebase/analytics";
 const firebaseConfig = {
@@ -34,8 +35,9 @@ function App() {
 			<Profile />
 			<Introduction />
 			<Links />
-			<Projects />
 			<History />
+			<Certifications />
+			<Projects />
 		</div>
 	);
 }

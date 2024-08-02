@@ -1,12 +1,6 @@
 @import url(../colours.css);
 
 .history-container {
-	padding: 2em;
-	background-image: url("../background\ picture\ -\ bottom.png");
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	background-position-y: bottom;
-	padding-bottom: 15%;
 }
 
 .history-title {
@@ -67,5 +61,11 @@
 
 	.history-item {
 		width: 100%;
+	}
+}
+
+@media (max-width: 768px) {
+	.history-container {
+		padding: 1em;
 	}
 }

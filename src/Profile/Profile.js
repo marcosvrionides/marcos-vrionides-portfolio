@@ -18,8 +18,9 @@ const Profile = () => {
 			</div>
 			<div className="links">
 				<a href="#">Home</a>
-				<a href="#projects">Projects</a>
 				<a href="#history">Timeline</a>
+				<a href="#certifications">Certifications</a>
+				<a href="#projects">Projects</a>
 			</div>
 		</div>
 	);
