@@ -9,7 +9,7 @@ const History = () => {
 				<div className="history-item">
 					<p className="history-year">April 2024 - Present</p>
 					<p className="history-degree">Pega Developer</p>
-					<p className="history-institution">NHS Resolution</p>
+					<p className="history-institution">AI4Process</p>
 				</div>
 				<div className="history-item">
 					<p className="history-year">2023 - 2024</p>

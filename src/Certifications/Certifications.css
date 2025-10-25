@@ -20,7 +20,7 @@
 	gap: 2em;
 }
 
-.certifications-cards > * {
+.certification {
 	width: 30em;
 	min-height: 30em;
 	max-width: 100%;
@@ -29,6 +29,7 @@
 	display: flex;
 	flex-direction: column;
 	padding: 1em;
+	box-shadow: 0 0 5px 5px var(--colour1);
 }
 
 .certification-title {
@@ -37,6 +38,7 @@
 	padding-bottom: 0.25em;
 	overflow: hidden;
 	color: var(--text);
+	text-shadow: 0 0 15px var(--text);
 }
 
 .certification-file {
