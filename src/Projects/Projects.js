@@ -132,7 +132,7 @@ const Projects = () => {
 					</div>
 					<a
 						className="goToProjectButton"
-						href="https://play.google.com/store/apps/details?id=com.backgammon_leaderboards&pcampaignid=web_share"
+						href="https://github.com/marcosvrionides/Leaderboards"
 						target="_blank"
 					>
 						<span className="goToProjectButtonIcon">
@@ -203,7 +203,7 @@ const Projects = () => {
 					</div>
 					<a
 						className="goToProjectButton"
-						href="https://play.google.com/store/apps/details?id=com.studentsthoughtsapp&pcampaignid=web_share"
+						href="https://github.com/marcosvrionides/Connect"
 						target="_blank"
 					>
 						<span className="goToProjectButtonIcon">
@@ -270,7 +270,7 @@ const Projects = () => {
 					</div>
 					<a
 						className="goToProjectButton"
-						href="https://play.google.com/store/apps/details?id=com.marcosvrionides.todolistapp&pcampaignid=web_share"
+						href="https://github.com/marcosvrionides/My_lists"
 						target="_blank"
 					>
 						<span className="goToProjectButtonIcon">
