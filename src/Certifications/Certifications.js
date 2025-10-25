@@ -1,7 +1,7 @@
 import React from "react";
 import "./Certifications.css";
-import PegaCSACertification from "./CERTIFICATION_Certified_Pega_Senior_System_Architect.pdf";
-import PegaCSSACertification from "./CERTIFICATION_Certified_Pega_System_Architect.pdf";
+import PegaCSACertification from "./CERTIFICATION_Certified_Pega_System_Architect.pdf";
+import PegaCSSACertification from "./CERTIFICATION_Certified_Pega_Senior_System_Architect.pdf";
 
 const Certifications = () => {
 	return (
