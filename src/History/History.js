@@ -7,17 +7,17 @@ const History = () => {
 			<div className="history-title">My Timeline</div>
 			<div className="history-items-container">
 				<div className="history-item">
-					<p className="history-year">April 2024 - Present</p>
+					<p className="history-year">January 2026 - Present</p>
 					<p className="history-degree">Pega Developer</p>
+					<p className="history-institution">NHS Resolution</p>
+				</div>
+				<div className="history-item">
+					<p className="history-year">April 2024 - January 2026</p>
+					<p className="history-degree">Associate Consultant</p>
 					<p className="history-institution">AI4Process</p>
 				</div>
 				<div className="history-item">
-					<p className="history-year">2023 - 2024</p>
-					<p className="history-degree">Software Developer</p>
-					<p className="history-institution">Freelance</p>
-				</div>
-				<div className="history-item">
-					<p className="history-year">2020 - 2023</p>
+					<p className="history-year">October 2020 - July 2023</p>
 					<p className="history-degree">BSc Computer Science</p>
 					<p className="history-institution">
 						Loughborough University

@@ -14,7 +14,7 @@
 .history-items-container {
 	padding: 1em;
 	align-items: center;
-	gap: 5%;
+	gap: 2em;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, 25em);
 	justify-content: center;
@@ -23,7 +23,8 @@
 .history-item {
 	background-color: var(--colour2);
 	border-radius: 1em;
-	width: 20vw;
+	width: 350px;
+	height: 350px;
 	padding: 1em;
 	border: 2px solid var(--colour1);
 	justify-self: center;
