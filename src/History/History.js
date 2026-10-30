@@ -13,7 +13,7 @@ const items = [
 		institution: "AI4Process",
 	},
 	{
-		year: "2020 - 2023",
+		year: "October 2020 - July 2023",
 		title: "BSc Computer Science",
 		institution: "Loughborough University",
 	},
