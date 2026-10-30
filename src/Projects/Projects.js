@@ -23,7 +23,7 @@ const projects = [
 		link: "https://leaderboards.vrionides.com",
 	},
 	{
-		title: "www.vrionides.com",
+		title: "vrionides.com",
 		screenshot: VrionidesHome,
 		description:
 			"My personal site and project hub, linking out to the projects I host under the vrionides.com domain.",
