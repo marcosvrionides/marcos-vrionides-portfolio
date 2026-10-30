@@ -1,63 +1,50 @@
 @import url(../colours.css);
 
-.certifications-container {
-	padding-block: 1em;
-	margin: 1em;
-}
-
-.certifications-title {
-	font-size: 3em;
-	font-weight: bold;
-	text-align: center;
-	margin-bottom: 1em;
-	color: var(--text);
-}
-
 .certifications-cards {
-	justify-content: center;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, 32em);
-	gap: 2em;
+	grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+	gap: 1.25rem;
 }
 
 .certification {
-	width: 30em;
-	min-height: 30em;
-	max-width: 100%;
-	border-radius: 1em;
-	background-color: var(--colour1);
 	display: flex;
 	flex-direction: column;
-	padding: 1em;
-	box-shadow: 0 0 5px 5px var(--colour1);
+	padding: 1.5rem;
+	border-radius: 1rem;
+	background-color: var(--teal-soft);
+	color: var(--ink);
+	text-decoration: none;
+	transition: transform 0.2s, background-color 0.2s;
+}
+
+.certification:hover {
+	background-color: var(--teal);
+	transform: translateY(-3px);
 }
 
 .certification-title {
-	font-size: 2.5em;
-	text-align: center;
-	padding-bottom: 0.25em;
-	overflow: hidden;
-	color: var(--text);
-	text-shadow: 0 0 15px var(--text);
+	margin: 0;
+	font-family: var(--font-display);
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 1.2;
 }
 
-.certification-file {
-	width: 100%;
-	height: 100%;
+.certification-name {
+	margin: 0.5rem 0 0;
 }
 
-@media (max-width: 768px) {
-	.certifications-cards {
-		display: flex;
-		flex-direction: column;
-		padding-inline: 0;
+.certification-date {
+	margin: 0.125rem 0 1.5rem;
+	font-size: 0.9375rem;
+	color: var(--text-secondary);
+}
 
-		grid-template-columns: unset;
-	}
-
-	.certifications-cards > * {
-		width: unset;
-		min-height: unset;
-		height: auto;
-	}
+.certification-view {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.25rem;
+	margin-top: auto;
+	font-size: 0.9375rem;
+	font-weight: 600;
 }

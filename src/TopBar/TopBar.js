@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./TopBar.css";
-import Profile from "../Profile/Profile.js";
 
 const TopBar = () => {
 	const [scrollPosition, setScrollPosition] = useState(0);
@@ -20,16 +19,21 @@ const TopBar = () => {
 	}, []);
 
 	return (
-		<div
-			className={
-				scrollPosition > 0 ? "container-visible" : "container-hidden"
-			}
-		>
-			<div className="items">
-				<Profile />
-			</div>
-			<div className="background" />
-		</div>
+		<header className={scrollPosition > 0 ? "topbar scrolled" : "topbar"}>
+			<nav className="topbar-inner">
+				<a className="topbar-brand" href="#top">
+					<span className="brand-full">Marcos Vrionides</span>
+					<span className="brand-short" aria-hidden="true">
+						MV
+					</span>
+				</a>
+				<div className="topbar-links">
+					<a href="#history">Timeline</a>
+					<a href="#certifications">Certifications</a>
+					<a href="#projects">Projects</a>
+				</div>
+			</nav>
+		</header>
 	);
 };
 

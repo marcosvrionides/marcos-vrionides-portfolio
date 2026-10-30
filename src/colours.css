@@ -1,8 +1,14 @@
 :root {
-	--colour1: #a6cfd5;
-	--colour2: #0d0221;
-	--colour18: #a6cfd54d;
-	--colour28: #0d02214d;
-	--text: #0f084b;
-	--text-secondary: #8a8a8a;
+	--teal: #a6cfd5;
+	--teal-soft: #dcebed;
+	--ink: #0f084b;
+	--ink-deep: #0d0221;
+	--paper: #f8f7f2;
+	--surface: #ffffff;
+	--text-secondary: #4f4d70;
+	--accent: #a84a06;
+	--line: #0f084b1f;
+
+	--font-display: "Bricolage Grotesque", "Segoe UI", sans-serif;
+	--font-body: "Instrument Sans", "Segoe UI", sans-serif;
 }

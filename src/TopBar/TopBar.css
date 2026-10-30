@@ -1,41 +1,71 @@
 @import url("../colours.css");
 
-.container-visible {
-	height: 120px;
-	width: 100%;
-	position: fixed;
-	transition: all 0.25s;
+.topbar {
+	position: sticky;
+	top: 0;
 	z-index: 2;
+	background-color: var(--teal);
+	border-bottom: 1px solid transparent;
+	transition: background-color 0.25s, border-color 0.25s;
 }
 
-.container-hidden {
-	visibility: hidden;
-	height: 0px;
-	width: 100%;
-	position: fixed;
-	transition: all 0.25s;
+.topbar.scrolled {
+	background-color: #f8f7f2e6;
+	border-bottom-color: var(--line);
+	backdrop-filter: blur(8px);
 }
 
-.background {
-	background-color: var(--colour28);
-	border-bottom: 2px solid var(--colour18);
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	backdrop-filter: blur(4px);
-}
-
-.items {
-	position: absolute;
-	z-index: 2;
+.topbar-inner {
 	display: flex;
-	flex-direction: row;
 	justify-content: space-between;
-	width: 100%;
+	align-items: center;
+	gap: 1rem;
+	max-width: 72rem;
+	margin-inline: auto;
+	padding: 0.875rem 1.5rem;
 }
 
-@media (max-width: 768px) {
-	.container-visible {
-		visibility: hidden;
+.topbar-brand {
+	font-family: var(--font-display);
+	font-size: 1.125rem;
+	font-weight: 700;
+	letter-spacing: -0.01em;
+	color: var(--ink);
+	text-decoration: none;
+}
+
+.brand-short {
+	display: none;
+}
+
+.topbar-links {
+	display: flex;
+	gap: 1.75rem;
+}
+
+.topbar-links a {
+	font-size: 0.9375rem;
+	font-weight: 500;
+	color: var(--ink);
+	text-decoration: none;
+	text-underline-offset: 0.3em;
+	text-decoration-thickness: 2px;
+}
+
+.topbar-links a:hover {
+	text-decoration-line: underline;
+}
+
+@media (max-width: 600px) {
+	.brand-full {
+		display: none;
+	}
+
+	.brand-short {
+		display: inline;
+	}
+
+	.topbar-links {
+		gap: 1rem;
 	}
 }

@@ -1,8 +1,7 @@
 import "./App.css";
 import React, { useEffect } from "react";
-import Profile from "./Profile/Profile";
 import Introduction from "./Introduction/Introduction";
-import Links from "./Links/Links";
+import Footer from "./Footer/Footer";
 import Projects from "./Projects/Projects";
 import History from "./History/History";
 import TopBar from "./TopBar/TopBar";
@@ -30,15 +29,16 @@ function App() {
 	}, []);
 
 	return (
-		<div className="body">
+		<>
 			<TopBar />
-			<Profile />
-			<Introduction />
-			<Links />
-			<History />
-			<Certifications />
-			<Projects />
-		</div>
+			<main>
+				<Introduction />
+				<History />
+				<Certifications />
+				<Projects />
+			</main>
+			<Footer />
+		</>
 	);
 }
 

@@ -1,44 +1,95 @@
 @import "../colours.css";
 
-.introduction-container {
-	background-color: #e1e1e1;
-	height: 10em;
-	width: 35em;
-	border-radius: 1em;
-	padding: 1em;
-	display: flex;
+.hero {
+	position: relative;
+	background-color: var(--teal);
+	padding-bottom: clamp(5rem, 11vw, 10rem);
+}
+
+.hero-inner {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 3rem;
 	align-items: center;
-	margin-left: 50%;
-	transform: translate(-50%);
-	margin-top: 5%;
-	border: 2px solid var(--colour1);
+	max-width: 72rem;
+	margin-inline: auto;
+	padding: 3.5rem 1.5rem 1rem;
 }
 
-.wave {
-	width: 100%;
-	transform: rotatez(-45deg);
+.hero-name {
+	margin: 0;
+	font-family: var(--font-display);
+	font-size: clamp(3rem, 8vw, 5.75rem);
+	font-weight: 800;
+	line-height: 0.98;
+	letter-spacing: -0.035em;
 }
 
-.intro {
-	font-size: 1.75em;
-	color: var(--text);
+.hero-occupation {
+	margin: 1rem 0 0;
+	font-family: var(--font-display);
+	font-size: clamp(1.25rem, 2.5vw, 1.625rem);
+	font-weight: 500;
+}
+
+.hero-intro {
+	max-width: 34rem;
+	margin: 1.5rem 0 2rem;
+	font-size: clamp(1.125rem, 2vw, 1.3125rem);
+	line-height: 1.5;
 }
 
 .highlight {
-	font-size: 1.25em;
-	color: #d47602;
+	font-weight: 700;
+	color: var(--accent);
+}
+
+.wave {
+	display: inline-block;
+	width: 1.6em;
+	height: 1.6em;
+	margin-block: -0.5em;
+	vertical-align: middle;
+	transform: rotate(-45deg);
+}
+
+.hero-picture {
+	display: block;
+	width: clamp(15rem, 26vw, 21rem);
+	aspect-ratio: 1;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 6px solid var(--paper);
+	box-shadow: 14px 14px 0 var(--ink-deep);
+}
+
+.hero-curve {
+	position: absolute;
+	inset: auto 0 -1px;
+	display: block;
+	width: 100%;
+	height: clamp(4.5rem, 10vw, 9rem);
+}
+
+.hero-curve-ribbon {
+	fill: var(--ink-deep);
+}
+
+.hero-curve-paper {
+	fill: var(--paper);
 }
 
 @media (max-width: 768px) {
-	.introduction-container {
-		width: unset;
-		transform: unset;
-		height: auto;
-		margin-inline: 1em;
-		margin-top: unset;
+	.hero-inner {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+		padding-top: 2rem;
 	}
 
-	.wave {
-		display: none;
+	.hero-picture {
+		order: -1;
+		width: 8.5rem;
+		border-width: 4px;
+		box-shadow: 7px 7px 0 var(--ink-deep);
 	}
 }

@@ -1,71 +1,73 @@
 @import url(../colours.css);
 
-.history-container {
+.timeline {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
-.history-title {
-	font-size: 3em;
-	font-weight: bold;
-	text-align: center;
-	padding-bottom: 1em;
-	color: var(--text);
+.timeline-item {
+	position: relative;
+	padding: 0 0 2.25rem 2rem;
+	border-left: 2px solid var(--teal);
 }
 
-.history-items-container {
-	padding: 1em;
-	align-items: center;
-	gap: 5%;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, 25em);
-	justify-content: center;
+.timeline-item:last-child {
+	padding-bottom: 0;
+	border-left-color: transparent;
 }
 
-.history-item {
-	background-color: var(--colour2);
-	border-radius: 1em;
-	width: 20vw;
-	padding: 1em;
-	border: 2px solid var(--colour1);
-	justify-self: center;
+.timeline-item::before {
+	content: "";
+	position: absolute;
+	top: 0.4rem;
+	left: -0.5rem;
+	width: 0.875rem;
+	height: 0.875rem;
+	border-radius: 50%;
+	background-color: var(--teal);
+	border: 3px solid var(--paper);
+	box-sizing: content-box;
+	margin-left: -2px;
+	margin-top: -3px;
 }
 
-.history-year {
-	font-size: 1.5em;
-	font-weight: bold;
-	color: #007bff;
+.timeline-item:first-child::before {
+	background-color: var(--accent);
 }
 
-.history-degree {
-	font-size: 1.5em;
-	font-weight: bold;
+.timeline-year {
+	margin: 0;
+	font-size: 0.875rem;
+	font-weight: 600;
+	color: var(--accent);
+}
+
+.timeline-title {
+	margin: 0.125rem 0 0;
+	font-family: var(--font-display);
+	font-size: 1.375rem;
+	font-weight: 700;
+	line-height: 1.25;
+}
+
+.timeline-institution {
+	margin: 0.125rem 0 0;
 	color: var(--text-secondary);
 }
 
-.history-institution {
-	font-size: 1.25em;
-	color: var(--text-secondary);
+.timeline-subjects {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.375rem;
+	margin: 0.625rem 0 0;
+	padding: 0;
+	list-style: none;
 }
 
-.history-subjects {
-	font-size: 1.15em;
-	padding-left: 0.5em;
-	color: var(--text-secondary);
-}
-
-@media (max-width: 1000px) {
-	.history-items-container {
-		display: flex;
-		flex-direction: column;
-		gap: 1em;
-	}
-
-	.history-item {
-		width: 100%;
-	}
-}
-
-@media (max-width: 768px) {
-	.history-container {
-		padding: 1em;
-	}
+.timeline-subjects li {
+	padding: 0.125rem 0.625rem;
+	border-radius: 999px;
+	background-color: var(--teal-soft);
+	font-size: 0.875rem;
 }

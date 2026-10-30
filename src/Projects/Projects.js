@@ -1,285 +1,157 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Projects.css";
-import { IoMdOpen } from "react-icons/io";
+import { FiArrowUpRight } from "react-icons/fi";
 import ConnectFeed from "./Sreenshots/Connect_feed.jpg";
-import ConnectMessages from "./Sreenshots/Connect_messages.jpg";
-import ConnectProfile from "./Sreenshots/Connect_profile.jpg";
-
-import LeaderboardsDetails from "./Sreenshots/Leaderboards_details.jpg";
-import LeaderboardsGames from "./Sreenshots/Leaderboards_games.jpg";
-import LeaderboardsHome from "./Sreenshots/Leaderboards_home.jpg";
 
 import MyListsHome from "./Sreenshots/MyLists_home.jpg";
-import MyListsList from "./Sreenshots/MyLists_list.jpg";
-import MyListsNew from "./Sreenshots/MyLists_new.jpg";
 
 import StudentsThoughtsFeed from "./Sreenshots/StudentsThoughts_feed.png";
 
-import PortfolioHome from "./Sreenshots/Portfolio_home.jpg";
-
 import DespotisHome from "./Sreenshots/Despoti_home.png";
 
+import VrionidesHome from "./Sreenshots/Vrionides_home.png";
+
+import LeaderboardsWebHome from "./Sreenshots/LeaderboardsWeb_home.png";
+
+const projects = [
+	{
+		title: "Leaderboards",
+		screenshot: LeaderboardsWebHome,
+		description:
+			"Score tracker used to keep track of games between friends, solving the problem of scribbled notes and lost score cards. It began as a React Native app and now runs in the browser, with search, favourites and a dark mode.",
+		techStack: ["React.js", "PostgreSQL", "Railway", "Git / Github"],
+		link: "https://leaderboards.vrionides.com",
+	},
+	{
+		title: "www.vrionides.com",
+		screenshot: VrionidesHome,
+		description:
+			"My personal site and project hub, linking out to the projects I host under the vrionides.com domain.",
+		techStack: ["React.js", "Railway"],
+		link: "https://www.vrionides.com",
+	},
+	{
+		title: "Stefanos Despoti",
+		screenshot: DespotisHome,
+		description:
+			"A responsive personal website for a musician to use as a business tool.",
+		techStack: ["React Native", "Firebase Hosting", "Git / Github"],
+		link: "https://despotis-ca7ff.web.app/",
+	},
+];
+
+const archivedProjects = [
+	{
+		title: "Students Thoughts",
+		year: "2023",
+		screenshot: StudentsThoughtsFeed,
+		description:
+			"Social network with communities, group chats and posts that could include files such as PDFs.",
+		techStack: ["React.js", "Express.js", "Firebase"],
+		link: "https://github.com/marcosvrionides/StudentsThoughts",
+	},
+	{
+		title: "Connect",
+		year: "2023",
+		screenshot: ConnectFeed,
+		description:
+			"Companion mobile app for Students Thoughts, with a feed, messaging and profiles.",
+		techStack: ["React Native", "Firebase"],
+		link: "https://github.com/marcosvrionides/Connect",
+	},
+	{
+		title: "My Lists",
+		year: "2022",
+		screenshot: MyListsHome,
+		description:
+			"Android to-do app for creating lists, checking off completed items and setting reminders.",
+		techStack: ["Java", "Android Studio", "SQLite"],
+		link: "https://github.com/marcosvrionides/My_lists",
+	},
+];
+
 const Projects = () => {
-	const [isBouncing1, setIsBouncing1] = useState(false);
-	const [isBouncing2, setIsBouncing2] = useState(false);
-	const [isBouncing3, setIsBouncing3] = useState(false);
-	const [isBouncing4, setIsBouncing4] = useState(false);
-	const [isBouncing5, setIsBouncing5] = useState(false);
-	const [isBouncing6, setIsBouncing6] = useState(false);
-
-	const handleProjectHover = (number) => {
-		switch (number) {
-			case 1:
-				setIsBouncing1(true);
-				break;
-			case 2:
-				setIsBouncing2(true);
-				break;
-			case 3:
-				setIsBouncing3(true);
-				break;
-			case 4:
-				setIsBouncing4(true);
-				break;
-			case 5:
-				setIsBouncing5(true);
-				break;
-			case 6:
-				setIsBouncing6(true);
-				break;
-		}
-	};
-
-	const handleMouseLeave = (number) => {
-		switch (number) {
-			case 1:
-				setIsBouncing1(false);
-				break;
-			case 2:
-				setIsBouncing2(false);
-				break;
-			case 3:
-				setIsBouncing3(false);
-				break;
-			case 4:
-				setIsBouncing4(false);
-				break;
-			case 5:
-				setIsBouncing5(false);
-				break;
-			case 6:
-				setIsBouncing6(false);
-				break;
-		}
-	};
-
 	return (
-		<div className="projects-container" id="projects">
-			<div className="projects-title">My Projects</div>
+		<section className="section" id="projects">
+			<h2 className="section-title projects-title">My Projects</h2>
 			<div className="projects-cards">
-				<div
-					className={isBouncing6 ? "bounce" : "project"}
-					onMouseEnter={() => handleProjectHover(6)}
-					onMouseLeave={() => handleMouseLeave(6)}
-				>
-					<div className="project-title">Stefanos Despoti</div>
-					<div className="project-screenshots-landscape">
-						<img src={DespotisHome} />
-					</div>
-					<span className="project-description">
-						A responisve personal website for a musician to use as a
-						business tool.
-					</span>
-					<div className="tech-stack-container">
-						<span>React Native</span>
-						<span>Firebase Hosting</span>
-						<span>Git / Github</span>
-					</div>
-					<a
-						className="goToProjectButton"
-						href="https://despotis-ca7ff.web.app/"
-						target="_blank"
-					>
-						<span className="goToProjectButtonIcon">
-							<IoMdOpen />
-						</span>
-					</a>
-				</div>
-				<div
-					className={isBouncing5 ? "bounce" : "project"}
-					onMouseEnter={() => handleProjectHover(5)}
-					onMouseLeave={() => handleMouseLeave(5)}
-				>
-					<div className="project-title">Leaderboards</div>
-					<div className="project-screenshots">
-						<img src={LeaderboardsHome} />
-						<img src={LeaderboardsDetails} />
-						<img src={LeaderboardsGames} />
-					</div>
-					<span className="project-description">
-						Score tracker application used to keep track of games
-						between friends. Aimed to solve the problem of scribbled
-						notes and lost score cards.
-					</span>
-					<div className="tech-stack-container">
-						<span>React Native</span>
-						<span>Firebase Realtime Database</span>
-						<span>Firebase Storage</span>
-						<span>Firebase Authentication</span>
-						<span>Firebase Cloud Functions</span>
-						<span>Firebase Cloud Messages</span>
-						<span>Git / Github</span>
-					</div>
-					<a
-						className="goToProjectButton"
-						href="https://github.com/marcosvrionides/Leaderboards"
-						target="_blank"
-					>
-						<span className="goToProjectButtonIcon">
-							<IoMdOpen />
-						</span>
-					</a>
-				</div>
-				<div
-					className={isBouncing4 ? "bounce" : "project"}
-					onMouseEnter={() => handleProjectHover(4)}
-					onMouseLeave={() => handleMouseLeave(4)}
-				>
-					<div className="project-title">
-						My Portfolio{" "}
-						<span
-							style={{
-								fontSize: "0.7em",
-								fontWeight: 100,
-							}}
-						>
-							(This site)
-						</span>
-					</div>
-					<div className="project-screenshots-landscape">
-						<img src={PortfolioHome} />
-					</div>
-					<span className="project-description">
-						A responsive website used to showcase my projects.
-					</span>
-					<div className="tech-stack-container">
-						<span>React.js</span>
-						<span>Firebase Hosting</span>
-						<span>Git / Github</span>
-					</div>
-					<a
-						className="goToProjectButton"
-						href="https://marcos-vrionides-portfolio.web.app/"
-						target="_blank"
-					>
-						<span className="goToProjectButtonIcon">
-							<IoMdOpen />
-						</span>
-					</a>
-				</div>
-				<div
-					className={isBouncing3 ? "bounce" : "project"}
-					onMouseEnter={() => handleProjectHover(3)}
-					onMouseLeave={() => handleMouseLeave(3)}
-				>
-					<div className="project-title">Connect</div>
-					<div className="project-screenshots">
-						<img src={ConnectFeed} />
-						<img src={ConnectMessages} />
-						<img src={ConnectProfile} />
-					</div>
-					<span className="project-description">
-						A companion app for StudentsThoughts.com. While
-						StudentsThoughts.com is no longer operational, Connect,
-						the companion app, is currently accessible on the Play
-						Store.
-					</span>
-					<div className="tech-stack-container">
-						<span>React Native</span>
-						<span>Firebase Realtime Database</span>
-						<span>Firebase Storage</span>
-						<span>Firebase Authentication</span>
-						<span>Git / Github</span>
-					</div>
-					<a
-						className="goToProjectButton"
-						href="https://github.com/marcosvrionides/Connect"
-						target="_blank"
-					>
-						<span className="goToProjectButtonIcon">
-							<IoMdOpen />
-						</span>
-					</a>
-				</div>
-				<div
-					className={isBouncing2 ? "bounce" : "project"}
-					onMouseEnter={() => handleProjectHover(2)}
-					onMouseLeave={() => handleMouseLeave(2)}
-				>
-					<div className="project-title">Students Thoughts</div>
-					<div className="project-screenshots-landscape">
-						<img src={StudentsThoughtsFeed} />
-					</div>
-					<span className="project-description">
-						Social media website which incorporates unique features,
-						including the ability to share posts containing
-						unconventional file types such as PDFs. Additionally, it
-						allows users to create communities, fostering
-						connections among individuals who share similar
-						interests, alongside incorporating conventional social
-						media features.
-					</span>
-					<div className="tech-stack-container">
-						<span>React.js</span>
-						<span>Express.js</span>
-						<span>Firebase Realtime Database</span>
-						<span>Firebase Storage</span>
-						<span>Google Cloud Virtual Machine</span>
-						<span>Google Domains</span>
-						<span>Git / Github</span>
-					</div>
-					<a
-						className="goToProjectButton"
-						href="https://github.com/marcosvrionides/StudentsThoughts"
-						target="_blank"
-					>
-						<span className="goToProjectButtonIcon">
-							<IoMdOpen />
-						</span>
-					</a>
-				</div>
-				<div
-					className={isBouncing1 ? "bounce" : "project"}
-					onMouseEnter={() => handleProjectHover(1)}
-					onMouseLeave={() => handleMouseLeave(1)}
-				>
-					<div className="project-title">My Lists</div>
-					<div className="project-screenshots">
-						<img src={MyListsHome} />
-						<img src={MyListsList} />
-						<img src={MyListsNew} />
-					</div>
-					<span className="project-description">
-						Android application which lets users create lists and
-						check off completed items or add new items to a list.
-					</span>
-					<div className="tech-stack-container">
-						<span>Java</span>
-						<span>Android Studio</span>
-						<span>Git / Github</span>
-					</div>
-					<a
-						className="goToProjectButton"
-						href="https://github.com/marcosvrionides/My_lists"
-						target="_blank"
-					>
-						<span className="goToProjectButtonIcon">
-							<IoMdOpen />
-						</span>
-					</a>
-				</div>
+				{projects.map((project) => (
+					<article className="project" key={project.title}>
+						<div className="project-media project-media-landscape">
+							<img
+								src={project.screenshot}
+								alt={`${project.title} screenshot`}
+								loading="lazy"
+							/>
+						</div>
+						<div className="project-body">
+							<h3 className="project-title">
+								<a
+									href={project.link}
+									target="_blank"
+									rel="noreferrer"
+								>
+									{project.title}
+								</a>
+							</h3>
+							<p className="project-description">
+								{project.description}
+							</p>
+							<ul className="tech-stack-container">
+								{project.techStack.map((tech) => (
+									<li key={tech}>{tech}</li>
+								))}
+							</ul>
+							<span className="project-view">
+								Visit site <FiArrowUpRight />
+							</span>
+						</div>
+					</article>
+				))}
 			</div>
-		</div>
+
+			<h3 className="archived-title">Archived</h3>
+			<p className="archived-intro">
+				No longer running, but the code is still on GitHub.
+			</p>
+			<div className="archived-cards">
+				{archivedProjects.map((project) => (
+					<article className="project archived" key={project.title}>
+						<img
+							className="archived-screenshot"
+							src={project.screenshot}
+							alt={`${project.title} screenshot`}
+							loading="lazy"
+						/>
+						<div className="archived-body">
+							<h4 className="project-title archived-project-title">
+								<a
+									href={project.link}
+									target="_blank"
+									rel="noreferrer"
+								>
+									{project.title}
+								</a>
+								<span className="project-note">
+									{project.year}
+								</span>
+							</h4>
+							<p className="project-description">
+								{project.description}
+							</p>
+							<ul className="tech-stack-container">
+								{project.techStack.map((tech) => (
+									<li key={tech}>{tech}</li>
+								))}
+							</ul>
+							<span className="project-view">
+								View code on GitHub <FiArrowUpRight />
+							</span>
+						</div>
+					</article>
+				))}
+			</div>
+		</section>
 	);
 };
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Links.css";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
@@ -10,6 +10,7 @@ const Links = () => {
 			<a
 				href="https://www.linkedin.com/in/marcos-vrionides/"
 				target="_blank"
+				rel="noreferrer"
 				className="contact-button"
 			>
 				<FaLinkedin /> LinkedIn
@@ -17,6 +18,7 @@ const Links = () => {
 			<a
 				href="https://github.com/marcosvrionides"
 				target="_blank"
+				rel="noreferrer"
 				className="contact-button"
 			>
 				<FaGithub /> GitHub

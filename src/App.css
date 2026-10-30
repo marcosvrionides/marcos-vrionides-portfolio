@@ -1,20 +1,35 @@
-.body {
-	background-image: url("./background\ picture.png");
-	background-repeat: no-repeat;
-	background-size: 100% 40%;
-	font-family: "Times New Roman", Times, serif;
-	display: flex;
-	flex-direction: column;
-	gap: 5em;
-	overflow-x: hidden;
-}
-@media (max-width: 768px) {
-	.body {
-		background-size: auto 15%;
-		gap: 3em;
-	}
+@import url("./colours.css");
+
+.section {
+	max-width: 72rem;
+	margin-inline: auto;
+	padding: 4.5rem 1.5rem;
+	scroll-margin-top: 3.5rem;
 }
 
-html {
-	scroll-behavior: smooth;
+.section-split {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 3rem;
+	align-items: start;
+}
+
+.section-title {
+	margin: 0;
+	font-family: var(--font-display);
+	font-size: clamp(2rem, 4vw, 2.75rem);
+	font-weight: 700;
+	line-height: 1.1;
+	letter-spacing: -0.02em;
+}
+
+@media (max-width: 768px) {
+	.section {
+		padding-block: 3rem;
+	}
+
+	.section-split {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
 }
