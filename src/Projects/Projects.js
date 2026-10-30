@@ -28,7 +28,7 @@ const projects = [
 		description:
 			"My personal site and project hub, linking out to the projects I host under the vrionides.com domain.",
 		techStack: ["React.js", "Railway"],
-		link: "https://www.vrionides.com",
+		link: "https://vrionides.com",
 	},
 	{
 		title: "Stefanos Despoti",
